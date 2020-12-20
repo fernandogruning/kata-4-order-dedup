@@ -14,4 +14,8 @@ describe Program do
   it 'SCE-1-1-3: OrderAndDedup([1,1,2,2,3,3,4,4,5,5,6,6,7,7,7]) debe retornar [1,2,3,4,5,6,7]' do
     expect(program.OrderAndDedup([1,1,2,2,3,3,4,4,5,5,6,6,7,7,7])).to eq [1,2,3,4,5,6,7]
   end
+
+  it 'SCE-1-1-4: OrderAndDedup([1,2,88,1024,1000,0]) debe retornar [0,1,2,88,1000,1024]' do
+    expect(program.OrderAndDedup([1,2,88,1024,1000,0])).to eq [0,1,2,88,1000,1024]
+  end
 end
